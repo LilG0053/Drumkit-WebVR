@@ -2192,9 +2192,9 @@
                         "collider": "box",
                         "box": {
                             "extents": [
-                                0.14,
+                                0.1599999,
                                 0.025,
-                                0.14
+                                0.1599999
                             ]
                         }
                     }
@@ -2219,6 +2219,170 @@
             ],
             "scaling": [
                 0.9999902,
+                0.9999901,
+                1.3066438
+            ]
+        },
+        "310": {
+            "name": "TomOne",
+            "parent": "287",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.135,
+                                0.025,
+                                0.135
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/tomone.mp3"
+                    }
+                }
+            ],
+            "translation": [
+                -0.0136769,
+                2.1295328,
+                -0.6126078
+            ],
+            "rotation": [
+                0.0171686,
+                -0.0266268,
+                0.1514521,
+                0.9879567
+            ],
+            "scaling": [
+                0.9999864,
+                0.9999888,
+                1.3066416
+            ]
+        },
+        "311": {
+            "name": "TomTwo",
+            "parent": "287",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.135,
+                                0.025,
+                                0.135
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/tomtwo.mp3"
+                    }
+                }
+            ],
+            "translation": [
+                -0.013676,
+                2.1295418,
+                0.3454142
+            ],
+            "rotation": [
+                0.0171686,
+                -0.0266268,
+                0.1514521,
+                0.9879567
+            ],
+            "scaling": [
+                0.9999864,
+                0.9999888,
+                1.3066416
+            ]
+        },
+        "312": {
+            "name": "crashCymbal",
+            "parent": "291",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.17,
+                                0.025,
+                                0.15
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/crashcymbal.mp3"
+                    }
+                }
+            ],
+            "translation": [
+                0.6283611,
+                2.3770127,
+                0.9563801
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.9999884,
+                0.9999901,
+                1.3066438
+            ]
+        },
+        "313": {
+            "name": "hiHat",
+            "parent": "290",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.15,
+                                0.025,
+                                0.15
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/hihat.mp3"
+                    }
+                }
+            ],
+            "translation": [
+                0.7810506,
+                1.9840829,
+                -1.4284105
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                0.9999884,
                 0.9999901,
                 1.3066438
             ]

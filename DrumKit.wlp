@@ -2010,7 +2010,7 @@
             ]
         },
         "303": {
-            "name": "Collision",
+            "name": "drumstick",
             "parent": "54",
             "components": [
                 {
@@ -2112,7 +2112,7 @@
             ]
         },
         "307": {
-            "name": "Collision",
+            "name": "drumstick",
             "parent": "306",
             "components": [
                 {
@@ -2159,7 +2159,10 @@
                     }
                 },
                 {
-                    "type": "drum"
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/snare.mp3"
+                    }
                 }
             ],
             "translation": [
@@ -2177,6 +2180,47 @@
                 0.9999942,
                 0.9999937,
                 0.999995
+            ]
+        },
+        "309": {
+            "name": "FloorTom",
+            "parent": "288",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.14,
+                                0.025,
+                                0.14
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/floorTom.mp3"
+                    }
+                }
+            ],
+            "translation": [
+                -0.1577695,
+                1.426704,
+                1.2838896
+            ],
+            "rotation": [
+                -0.0591649,
+                -0.0034553,
+                0.0433058,
+                0.9973024
+            ],
+            "scaling": [
+                0.9999902,
+                0.9999901,
+                1.3066438
             ]
         }
     },

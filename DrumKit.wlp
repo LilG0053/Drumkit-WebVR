@@ -266,18 +266,6 @@
             },
             "parent": "53"
         },
-        "61": {
-            "link": {
-                "name": "x_button<x_button_pressed_value<root",
-                "file": "models\\oculus-touch-v2-left.glb"
-            },
-            "parent": "60",
-            "components": [
-                {
-                    "active": false
-                }
-            ]
-        },
         "62": {
             "link": {
                 "name": "xr_standard_squeeze_pressed_max<root",
@@ -298,13 +286,6 @@
                 "file": "models\\oculus-touch-v2-left.glb"
             },
             "parent": "53"
-        },
-        "65": {
-            "link": {
-                "name": "squeeze<xr_standard_squeeze_pressed_value<root",
-                "file": "models\\oculus-touch-v2-left.glb"
-            },
-            "parent": "64"
         },
         "66": {
             "link": {
@@ -369,18 +350,6 @@
             },
             "parent": "71"
         },
-        "75": {
-            "link": {
-                "name": "thumbstick<xr_standard_thumbstick_yaxis_pressed_value<xr_standard_thumbstick_xaxis_pressed_value<xr_standard_thumbstick_pressed_value<root",
-                "file": "models\\oculus-touch-v2-left.glb"
-            },
-            "parent": "74",
-            "components": [
-                {
-                    "active": false
-                }
-            ]
-        },
         "76": {
             "link": {
                 "name": "xr_standard_trigger_pressed_max<root",
@@ -402,18 +371,6 @@
             },
             "parent": "53"
         },
-        "79": {
-            "link": {
-                "name": "trigger<xr_standard_trigger_pressed_value<root",
-                "file": "models\\oculus-touch-v2-left.glb"
-            },
-            "parent": "78",
-            "components": [
-                {
-                    "active": false
-                }
-            ]
-        },
         "80": {
             "link": {
                 "name": "y_button_pressed_max<root",
@@ -434,18 +391,6 @@
                 "file": "models\\oculus-touch-v2-left.glb"
             },
             "parent": "53"
-        },
-        "83": {
-            "link": {
-                "name": "y_button<y_button_pressed_value<root",
-                "file": "models\\oculus-touch-v2-left.glb"
-            },
-            "parent": "82",
-            "components": [
-                {
-                    "active": false
-                }
-            ]
         },
         "95": {
             "link": {
@@ -492,18 +437,6 @@
             },
             "parent": "95"
         },
-        "99": {
-            "link": {
-                "name": "a_button<a_button_pressed_value<root",
-                "file": "models\\oculus-touch-v2-right.glb"
-            },
-            "parent": "98",
-            "components": [
-                {
-                    "active": false
-                }
-            ]
-        },
         "100": {
             "link": {
                 "name": "b_button_pressed_max<root",
@@ -524,34 +457,6 @@
                 "file": "models\\oculus-touch-v2-right.glb"
             },
             "parent": "95"
-        },
-        "103": {
-            "link": {
-                "name": "b_button<b_button_pressed_value<root",
-                "file": "models\\oculus-touch-v2-right.glb"
-            },
-            "parent": "102",
-            "components": [
-                {
-                    "active": false
-                }
-            ],
-            "translation": [
-                -0.0025285,
-                -0.0013652,
-                0.0090629
-            ],
-            "rotation": [
-                0.7599728,
-                -0.0032679,
-                -0.0003239,
-                0.6499466
-            ],
-            "scaling": [
-                1.0,
-                1.0000001,
-                1.0
-            ]
         },
         "105": {
             "link": {
@@ -594,13 +499,6 @@
                 "file": "models\\oculus-touch-v2-right.glb"
             },
             "parent": "95"
-        },
-        "111": {
-            "link": {
-                "name": "squeeze<xr_standard_squeeze_pressed_value<root",
-                "file": "models\\oculus-touch-v2-right.glb"
-            },
-            "parent": "110"
         },
         "112": {
             "link": {
@@ -665,18 +563,6 @@
             },
             "parent": "117"
         },
-        "121": {
-            "link": {
-                "name": "thumbstick<xr_standard_thumbstick_yaxis_pressed_value<xr_standard_thumbstick_xaxis_pressed_value<xr_standard_thumbstick_pressed_value<root",
-                "file": "models\\oculus-touch-v2-right.glb"
-            },
-            "parent": "120",
-            "components": [
-                {
-                    "active": false
-                }
-            ]
-        },
         "122": {
             "link": {
                 "name": "xr_standard_trigger_pressed_max<root",
@@ -697,18 +583,6 @@
                 "file": "models\\oculus-touch-v2-right.glb"
             },
             "parent": "95"
-        },
-        "125": {
-            "link": {
-                "name": "trigger<xr_standard_trigger_pressed_value<root",
-                "file": "models\\oculus-touch-v2-right.glb"
-            },
-            "parent": "124",
-            "components": [
-                {
-                    "active": false
-                }
-            ]
         },
         "126": {
             "name": "CursorLeft",
@@ -2316,7 +2190,7 @@
                         "box": {
                             "extents": [
                                 0.17,
-                                0.025,
+                                0.0399999,
                                 0.15
                             ]
                         }
@@ -2357,7 +2231,7 @@
                         "box": {
                             "extents": [
                                 0.15,
-                                0.025,
+                                0.0399999,
                                 0.15
                             ]
                         }

@@ -1885,9 +1885,9 @@
             },
             "parent": "294",
             "translation": [
+                -0.1329396,
                 0.0,
-                0.0,
-                0.0
+                0.2165998
             ],
             "rotation": [
                 0.0,
@@ -1908,9 +1908,9 @@
             },
             "parent": "294",
             "translation": [
+                -0.624809,
                 0.0,
-                0.0,
-                0.0
+                -0.6367599
             ],
             "rotation": [
                 0.0,
@@ -2161,7 +2161,7 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/snare.mp3"
+                        "drumSoundPath": "sfx/snare.wav"
                     }
                 }
             ],
@@ -2243,7 +2243,7 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/tomone.mp3"
+                        "drumSoundPath": "sfx/tomone.wav"
                     }
                 }
             ],
@@ -2284,7 +2284,7 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/tomtwo.mp3"
+                        "drumSoundPath": "sfx/tomtwo.wav"
                     }
                 }
             ],
@@ -2385,6 +2385,70 @@
                 0.9999884,
                 0.9999901,
                 1.3066438
+            ]
+        },
+        "318": {
+            "link": {
+                "name": "Cowbell_Q",
+                "file": "assets\\Cowbell.glb"
+            },
+            "parent": "294",
+            "translation": [
+                -0.1701562,
+                1.4350237,
+                -0.1499162
+            ],
+            "rotation": [
+                0.4989184,
+                0.5010789,
+                0.501078,
+                -0.4989198
+            ],
+            "scaling": [
+                3.7899992,
+                3.789994,
+                3.7899956
+            ]
+        },
+        "320": {
+            "name": "FloorTom",
+            "parent": "318",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.0399999,
+                                0.14
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/cowbell.mp3"
+                    }
+                }
+            ],
+            "translation": [
+                2.2377506070370146e-8,
+                6.853719014543458e-8,
+                -0.0
+            ],
+            "rotation": [
+                0.7071,
+                0.0030537,
+                3.7290075738383166e-7,
+                0.7071068
+            ],
+            "scaling": [
+                0.9999902,
+                0.99999,
+                1.3066436
             ]
         }
     },
@@ -2666,6 +2730,12 @@
             "link": {
                 "name": "Drumstick_0",
                 "file": "assets\\lowpoly_drumstick.glb"
+            }
+        },
+        "315": {
+            "link": {
+                "name": "Cowbell_Q-Mesh",
+                "file": "assets\\Cowbell.glb"
             }
         }
     },
@@ -3005,6 +3075,12 @@
             "link": {
                 "name": "DrumstickMaterial",
                 "file": "assets\\lowpoly_drumstick.glb"
+            }
+        },
+        "314": {
+            "link": {
+                "name": "phong1SG",
+                "file": "assets\\Cowbell.glb"
             }
         }
     },
@@ -3481,6 +3557,11 @@
         },
         "301": {
             "fileName": "assets/lowpoly_drumstick.glb",
+            "importerName": "",
+            "importPhysicalAsPhongMaterials": true
+        },
+        "317": {
+            "fileName": "assets/Cowbell.glb",
             "importerName": "",
             "importPhysicalAsPhongMaterials": true
         }

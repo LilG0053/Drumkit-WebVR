@@ -1,4 +1,4 @@
-import {Component, InputComponent, MeshComponent, Property} from '@wonderlandengine/api';
+import {Component, InputComponent, MeshComponent, Type, Property} from '@wonderlandengine/api';
 import {CursorTarget, HowlerAudioSource} from '@wonderlandengine/components';
 
 /**
@@ -34,6 +34,9 @@ export class ButtonComponent extends Component {
     static Properties = {
         /** Object that has the button's mesh attached */
         buttonMeshObject: Property.object(),
+        /** Drumset parent to be moved up or down */
+        drumSetObject: Property.object(),
+        isDown: { type: Type.Bool, default: false },
         /** Material to apply when the user hovers the button */
         hoverMaterial: Property.material(),
     };
@@ -91,8 +94,14 @@ export class ButtonComponent extends Component {
 
     /* Called by 'cursor-target' */
     onDown = (_, cursor) => {
+        let modifier = 1;
+        if (this.isDown) {
+            modifier = -1;
+        }
         this.soundClick.play();
-        this.buttonMeshObject.translate([0.0, -0.1, 0.0]);
+        this.buttonMeshObject.translateLocal([0.0, -0.1, 0.0]);
+        this.drumSetObject.translateLocal([0.0, 0.3 * modifier, 0.0]);
+        console.log('button down');
         hapticFeedback(cursor.object, 1.0, 20);
     }
 

@@ -36,9 +36,9 @@
                         "collider": "aabb",
                         "aabb": {
                             "extents": [
-                                4.0,
+                                1.2,
                                 0.05,
-                                4.0
+                                1.1
                             ]
                         },
                         "groups": 4
@@ -614,7 +614,7 @@
                         "eyeLeft": "18",
                         "eyeRight": "19"
                     },
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "vr-mode-active-switch"
@@ -1581,19 +1581,6 @@
                     }
                 },
                 {
-                    "type": "teleport",
-                    "teleport": {
-                        "floorGroup": 2,
-                        "camRoot": "14",
-                        "cam": "17",
-                        "teleportIndicatorMeshObject": "208",
-                        "indicatorYOffset": 0.0099999,
-                        "eyeLeft": "18",
-                        "eyeRight": "19"
-                    },
-                    "active": false
-                },
-                {
                     "type": "vr-mode-active-switch"
                 }
             ],
@@ -2451,12 +2438,12 @@
             "rotation": [
                 8.842729215530198e-8,
                 0.9659258,
-                1.4600099973449687e-7,
+                1.460009997344969e-7,
                 -0.2588188
             ],
             "scaling": [
                 6.5416464,
-                6.5416493,
+                6.5416492,
                 6.5416464
             ]
         },

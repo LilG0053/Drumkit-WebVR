@@ -31,6 +31,7 @@ export function hapticFeedback(object, strength, duration) {
  */
 export class ButtonComponent extends Component {
     static TypeName = 'button';
+
     static Properties = {
         /** Object that has the button's mesh attached */
         buttonMeshObject: Property.object(),
@@ -48,6 +49,9 @@ export class ButtonComponent extends Component {
 
     /* Position to return to when "unpressing" the button */
     returnPos = new Float32Array(3);
+    /* Keeps track of the drum height so it doesnt go too high*/
+    static drumHeightCounter = 0;
+
 
     start() {
         this.mesh = this.buttonMeshObject.getComponent(MeshComponent);
@@ -97,10 +101,19 @@ export class ButtonComponent extends Component {
         let modifier = 1;
         if (this.isDown) {
             modifier = -1;
+            console.log('down');
+        } else {
+            console.log('up');
+            modifier = 1;
         }
         this.soundClick.play();
         this.buttonMeshObject.translateLocal([0.0, -0.1, 0.0]);
-        this.drumSetObject.translateLocal([0.0, 0.3 * modifier, 0.0]);
+        console.log('drumHeightCounter is', ButtonComponent.drumHeightCounter);
+        if (ButtonComponent.drumHeightCounter + modifier <= 8 && ButtonComponent.drumHeightCounter + modifier >= -3) {
+            this.drumSetObject.translateLocal([0.0, 0.1 * modifier, 0.0]);
+            ButtonComponent.drumHeightCounter = ButtonComponent.drumHeightCounter + (modifier * 1);
+        }
+        
         console.log('button down');
         hapticFeedback(cursor.object, 1.0, 20);
     }

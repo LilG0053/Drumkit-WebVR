@@ -9,7 +9,7 @@ import { HowlerAudioSource } from '@wonderlandengine/components';
  * @param {number} duration Duration in milliseconds
  */
 export function hapticFeedback(
-    Object3D,
+    object,
     strength,
     duration
 ) {
@@ -41,6 +41,7 @@ export class Drum extends Component {
     static Properties = {
         /** Object that has the button's mesh attached */
         drumSoundPath: { type: Type.String, default: 'sfx/snare.mp3' },
+        inputObject: Property.object(),
     };
 
     hitLastFrame = false;
@@ -80,7 +81,7 @@ export class Drum extends Component {
                     this.hitLastFrame = true;
                     stickDetected = true;
                     //travel up the hierarchy to get the controller
-                    hapticFeedback(otherObject, 0.7, 20);
+                    hapticFeedback(otherObject.parent.parent.parent.parent, 0.9, 20);
                 }
             }
         }

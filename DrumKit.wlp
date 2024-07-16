@@ -2010,7 +2010,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/snare.wav"
+                        "drumSoundPath": "sfx/snare.wav",
+                        "inputObject": "130"
                     }
                 }
             ],
@@ -2051,7 +2052,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/floorTom.mp3"
+                        "drumSoundPath": "sfx/floorTom.mp3",
+                        "inputObject": "130"
                     }
                 }
             ],
@@ -2092,7 +2094,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/tomone.wav"
+                        "drumSoundPath": "sfx/tomone.wav",
+                        "inputObject": "130"
                     }
                 }
             ],
@@ -2133,7 +2136,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/tomtwo.wav"
+                        "drumSoundPath": "sfx/tomtwo.wav",
+                        "inputObject": "130"
                     }
                 }
             ],
@@ -2174,7 +2178,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/crashcymbal.mp3"
+                        "drumSoundPath": "sfx/crashcymbal.mp3",
+                        "inputObject": "130"
                     }
                 }
             ],
@@ -2215,7 +2220,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/hihat.wav"
+                        "drumSoundPath": "sfx/hihat.wav",
+                        "inputObject": "130"
                     }
                 }
             ],
@@ -2279,7 +2285,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/cowbell.mp3"
+                        "drumSoundPath": "sfx/cowbell.mp3",
+                        "inputObject": "130"
                     }
                 }
             ],
@@ -2601,7 +2608,8 @@
                 {
                     "type": "drum",
                     "drum": {
-                        "drumSoundPath": "sfx/kick.wav"
+                        "drumSoundPath": "sfx/kick.wav",
+                        "inputObject": "130"
                     }
                 }
             ],

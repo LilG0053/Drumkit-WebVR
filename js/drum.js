@@ -81,7 +81,7 @@ export class Drum extends Component {
                     this.hitLastFrame = true;
                     stickDetected = true;
                     //travel up the hierarchy to get the controller
-                    hapticFeedback(otherObject.parent.parent.parent.parent, 0.9, 20);
+                    hapticFeedback(otherObject.parent.parent.parent.parent, 0.9, 100);
                 }
             }
         }

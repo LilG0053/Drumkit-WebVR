@@ -2611,6 +2611,9 @@
                         "drumSoundPath": "sfx/kick.wav",
                         "inputObject": "130"
                     }
+                },
+                {
+                    "type": "kickDrumActivation"
                 }
             ],
             "translation": [

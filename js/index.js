@@ -23,6 +23,7 @@ import {TeleportComponent} from '@wonderlandengine/components';
 import {VrModeActiveSwitch} from '@wonderlandengine/components';
 import {ButtonComponent} from './button.js';
 import {Drum} from './drum.js';
+import {KickDrumActivation} from './kickDrumActivation.js';
 /* wle:auto-imports:end */
 
 import {loadRuntime} from '@wonderlandengine/api';
@@ -93,6 +94,7 @@ engine.registerComponent(TeleportComponent);
 engine.registerComponent(VrModeActiveSwitch);
 engine.registerComponent(ButtonComponent);
 engine.registerComponent(Drum);
+engine.registerComponent(KickDrumActivation);
 /* wle:auto-register:end */
 
 try {

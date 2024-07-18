@@ -45,7 +45,8 @@ export class Drum extends Component {
     };
 
     hitLastFrame = false;
-
+    lastObjectId = 0;
+    otherDrumstickPlayed = false;
     static onRegister(engine) {
         engine.registerComponent(HowlerAudioSource);
     }
@@ -69,6 +70,8 @@ export class Drum extends Component {
         /* Called every frame. */
         let overLaps = this.collider.queryOverlaps();
         let stickDetected = false;
+        let isOtherDrumstick = false;
+        let stickNumber = 0;
         // check for stick overlap
         for (const otherCollision of overLaps) {
             const otherObject = otherCollision.object;
@@ -76,18 +79,34 @@ export class Drum extends Component {
             //If it has been hit by the drumstick play the sound
             if (otherObject.name === 'drumstick') {
                 stickDetected = true;
+                stickNumber++;
+                if (otherObject.objectId != this.lastObjectId) {
+                    isOtherDrumstick = true
+                }
                 if (!this.hitLastFrame) {
                     this.soundHit.play();
                     this.hitLastFrame = true;
                     stickDetected = true;
+                    this.lastObjectId = otherObject.objectId;
+                    //travel up the hierarchy to get the controller
+                    hapticFeedback(otherObject.parent.parent.parent.parent, 0.9, 100);
+                } else if (isOtherDrumstick && !this.otherDrumstickPlayed) {
+                    this.soundHit.play();
+                    this.hitLastFrame = true;
+                    stickDetected = true;
+                    this.lastObjectId = otherObject.objectId;
+                    this.otherDrumstickPlayed = true;
                     //travel up the hierarchy to get the controller
                     hapticFeedback(otherObject.parent.parent.parent.parent, 0.9, 100);
                 }
-            }
+            } 
         }
 
         if (!stickDetected) {
             this.hitLastFrame = false;
+        }
+        if (stickNumber === 1) {
+            this.otherDrumstickPlayed = false;
         }
     }
 }

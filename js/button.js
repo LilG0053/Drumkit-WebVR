@@ -1,4 +1,4 @@
-import {Component, InputComponent, MeshComponent, Type, Property} from '@wonderlandengine/api';
+import { Component, InputComponent, MeshComponent, Type, Property} from '@wonderlandengine/api';
 import {CursorTarget, HowlerAudioSource} from '@wonderlandengine/components';
 
 /**
@@ -17,6 +17,7 @@ export function hapticFeedback(object, strength, duration) {
     }
 }
 
+
 /**
  * Button component.
  *
@@ -29,6 +30,8 @@ export function hapticFeedback(object, strength, duration) {
  *
  * Supports interaction with `finger-cursor` component for hand tracking.
  */
+
+
 export class ButtonComponent extends Component {
     static TypeName = 'button';
 
@@ -38,8 +41,12 @@ export class ButtonComponent extends Component {
         /** Drumset parent to be moved up or down */
         drumSetObject: Property.object(),
         isDown: { type: Type.Bool, default: false },
+        isUp: { type: Type.Bool, defualt: false },
+        isCycle: { type: Type.Bool, default: false },
+        skyMaterial: Property.material(),
         /** Material to apply when the user hovers the button */
         hoverMaterial: Property.material(),
+        skyBoxes: Property.object(),
     };
 
     static onRegister(engine) {
@@ -51,8 +58,8 @@ export class ButtonComponent extends Component {
     returnPos = new Float32Array(3);
     /* Keeps track of the drum height so it doesnt go too high*/
     static drumHeightCounter = 0;
-
-
+    currTextIndex = 0;
+    skyBoxArr = [];
     start() {
         this.mesh = this.buttonMeshObject.getComponent(MeshComponent);
         this.defaultMaterial = this.mesh.material;
@@ -70,6 +77,12 @@ export class ButtonComponent extends Component {
             src: 'sfx/unclick.wav',
             spatial: true,
         });
+        if (this.isCycle) {
+            this.currTextIndex = 0;
+            this.skyBoxArr = this.skyBoxes.getChildren();
+        }
+        
+        
     }
 
     onActivate() {
@@ -98,22 +111,32 @@ export class ButtonComponent extends Component {
 
     /* Called by 'cursor-target' */
     onDown = (_, cursor) => {
-        let modifier = 1;
-        if (this.isDown) {
-            modifier = -1;
-            console.log('down');
-        } else {
-            console.log('up');
-            modifier = 1;
+        if (this.isDown || this.isUp) {
+            let modifier = 1;
+            if (this.isDown) {
+                modifier = -1;
+                console.log('down');
+            } else {
+                console.log('up');
+                modifier = 1;
+            }
+            this.buttonMeshObject.translateLocal([0.0, -0.1, 0.0]);
+            console.log('drumHeightCounter is', ButtonComponent.drumHeightCounter);
+            if (ButtonComponent.drumHeightCounter + modifier <= 8 && ButtonComponent.drumHeightCounter + modifier >= -3) {
+                this.drumSetObject.translateLocal([0.0, 0.1 * modifier, 0.0]);
+                ButtonComponent.drumHeightCounter = ButtonComponent.drumHeightCounter + (modifier * 1);
+            }
+        }
+
+        if (this.isCycle) {
+            this.skyBoxArr[this.currTextIndex].active = false;
+            this.currTextIndex++;
+            this.currTextIndex = this.currTextIndex % this.skyBoxArr.length;
+            console.log('Enabling skybox #' + this.currTextIndex);
+            this.skyBoxArr[this.currTextIndex].active = true;
+            
         }
         this.soundClick.play();
-        this.buttonMeshObject.translateLocal([0.0, -0.1, 0.0]);
-        console.log('drumHeightCounter is', ButtonComponent.drumHeightCounter);
-        if (ButtonComponent.drumHeightCounter + modifier <= 8 && ButtonComponent.drumHeightCounter + modifier >= -3) {
-            this.drumSetObject.translateLocal([0.0, 0.1 * modifier, 0.0]);
-            ButtonComponent.drumHeightCounter = ButtonComponent.drumHeightCounter + (modifier * 1);
-        }
-        
         console.log('button down');
         hapticFeedback(cursor.object, 1.0, 20);
     }

@@ -219,9 +219,9 @@
                 1.0
             ],
             "scaling": [
-                0.9999997,
-                0.9999995,
-                0.9999997
+                0.8,
+                0.8,
+                0.8
             ]
         },
         "55": {
@@ -1955,9 +1955,9 @@
                 1.0
             ],
             "scaling": [
-                0.9999997,
-                0.9999995,
-                0.9999997
+                0.8,
+                0.8,
+                0.8
             ]
         },
         "307": {
@@ -2320,20 +2320,20 @@
                 }
             ],
             "translation": [
-                0.1430391,
+                0.1140984,
                 -0.0267918,
-                -0.2034891
+                -0.1732106
             ],
             "rotation": [
-                -2.478814735695778e-7,
+                -2.4788172936496267e-7,
                 0.9281091,
-                2.882024716654996e-7,
+                2.882023864003713e-7,
                 0.3723083
             ],
             "scaling": [
-                0.0492823,
-                0.049284,
-                0.0492823
+                0.0399999,
+                0.0399999,
+                0.0399999
             ]
         },
         "322": {
@@ -2360,8 +2360,8 @@
                 -0.3930103
             ],
             "scaling": [
-                0.0492823,
-                0.049284,
+                0.0399999,
+                0.0492839,
                 0.0492823
             ]
         },
@@ -2435,6 +2435,13 @@
                     "mesh": {
                         "material": "20"
                     }
+                },
+                {
+                    "type": "arEnabled",
+                    "arEnabled": {
+                        "skyBox": "326",
+                        "floor": "15"
+                    }
                 }
             ],
             "translation": [
@@ -2452,7 +2459,8 @@
                 6.5416464,
                 6.5416492,
                 6.5416464
-            ]
+            ],
+            "name": "SkyBox"
         },
         "331": {
             "name": "Light.000",
@@ -3105,6 +3113,12 @@
                 "name": "nighttimeskybox.jpg",
                 "file": "assets\\nighttimeskybox.jpg"
             }
+        },
+        "345": {
+            "link": {
+                "name": "tundra_northern_lights.jpg",
+                "file": "assets\\tundra_northern_lights.jpg"
+            }
         }
     },
     "images": {
@@ -3153,6 +3167,12 @@
                 "name": "nighttimeskybox.jpg",
                 "file": "assets\\nighttimeskybox.jpg"
             }
+        },
+        "344": {
+            "link": {
+                "name": "tundra_northern_lights.jpg",
+                "file": "assets\\tundra_northern_lights.jpg"
+            }
         }
     },
     "materials": {
@@ -3185,7 +3205,7 @@
             },
             "pipeline": "35",
             "Flat": {
-                "flatTexture": "329"
+                "flatTexture": "345"
             }
         },
         "22": {
@@ -3700,7 +3720,16 @@
         "rendering": {
             "hdr": {
                 "exposure": 1.5
-            }
+            },
+            "clearColor": [
+                0.1679999,
+                0.1679999,
+                0.1679999,
+                0.0
+            ]
+        },
+        "ar": {
+            "enable": true
         }
     },
     "animations": {},
@@ -3938,6 +3967,10 @@
         },
         "333": {
             "fileName": "assets/digital-7.ttf",
+            "importerName": ""
+        },
+        "346": {
+            "fileName": "assets/tundra_northern_lights.jpg",
             "importerName": ""
         }
     },

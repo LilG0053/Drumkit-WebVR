@@ -1314,20 +1314,20 @@
                 }
             ],
             "translation": [
-                -1.2602432,
-                1.1999989,
-                0.8991435
+                -1.2602636,
+                1.200053,
+                0.8991448
             ],
             "rotation": [
-                -0.5002095,
-                0.8659043,
-                -0.0001269,
-                0.0002741
+                0.7074505,
+                -0.7067628,
+                0.0000514,
+                -0.0002975
             ],
             "scaling": [
                 0.25,
-                0.1249995,
-                0.2499997
+                0.1249994,
+                0.2499999
             ]
         },
         "196": {
@@ -2446,20 +2446,20 @@
                 }
             ],
             "translation": [
-                -2.5825085,
-                1.7328009,
-                0.6525711
+                -2.5825364,
+                1.7328197,
+                0.6525787
             ],
             "rotation": [
-                8.842729215530198e-8,
+                8.842724241731048e-8,
                 0.9659258,
-                1.460010281562063e-7,
-                -0.2588188
+                1.460031739952683e-7,
+                -0.258819
             ],
             "scaling": [
-                6.5416474,
-                6.5416493,
-                6.5416474
+                33.9315376,
+                33.9315338,
+                33.9315376
             ],
             "name": "SkyBox0",
             "parent": "376"
@@ -2767,7 +2767,7 @@
                 {
                     "type": "text",
                     "text": {
-                        "text": "\"Lowpoly drumstick\" \n(https://skfb.ly/69Yxq) by \nJiří Kuba is licensed under \nCreative Commons Attribution .\n\nCowbell by Poly by Google \n[CC-BY] via Poly Pizza\n\nDrumkit by J-Toastie \n[CC-BY] via Poly Pizza\n\nAlien Terrain 05 HDRI by \nGiimann on Sketchfab\n\nStylized_Jungle_Terrain_1 \nby Giimann on Sketchfab\n\nFREE - SkyBox Tundra Northern \nLights by Paul on Sketchfab",
+                        "text": "\"Lowpoly drumstick\" \n(https://skfb.ly/69Yxq) by \nJiří Kuba is licensed under \nCreative Commons Attribution .\n\nCowbell by Poly by Google \n[CC-BY] via Poly Pizza\n\nDrumkit by J-Toastie \n[CC-BY] via Poly Pizza\n\nAlien Terrain 05 HDRI by \nGiimann on Sketchfab\n\nStylized_Jungle_Terrain_1 \nby Giimann on Sketchfab\n\nFREE - SkyBox Tundra Northern \nLights by Paul on Sketchfab\n\n360 of Coral Reefs in American Samoa\n\nCredit: The Ocean Agency / XL \nCatlin Seaview Survey",
                         "material": "201",
                         "alignment": "center",
                         "wrapMode": "none"
@@ -2777,46 +2777,18 @@
             "translation": [
                 0.0521416,
                 0.156118,
-                0.0121557
+                0.0121556
             ],
             "rotation": [
-                -0.499805,
-                0.5006929,
-                0.4995015,
-                0.4999997
+                -0.4998052,
+                0.5006924,
+                0.499502,
+                0.4999994
             ],
             "scaling": [
-                0.8084909,
-                1.1571007,
-                2.3142364
-            ]
-        },
-        "355": {
-            "name": "Panel",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "195",
-                        "material": "202"
-                    }
-                }
-            ],
-            "translation": [
-                -1.2602432,
-                1.1999989,
-                0.8991435
-            ],
-            "rotation": [
-                -0.5002095,
-                0.8659043,
-                -0.0001269,
-                0.0002741
-            ],
-            "scaling": [
-                0.25,
-                0.1249995,
-                0.2499997
+                0.711472,
+                1.0182486,
+                2.0365285
             ]
         },
         "356": {
@@ -2831,20 +2803,20 @@
                 }
             ],
             "translation": [
-                -1.2604622,
-                1.1999799,
-                1.2640874
+                -1.260443,
+                1.1999264,
+                1.2640875
             ],
             "rotation": [
-                -0.5002096,
-                0.8659042,
-                -0.0001266,
-                0.0002741
+                0.7074505,
+                -0.7067628,
+                0.0000512,
+                -0.0002974
             ],
             "scaling": [
-                0.2499999,
-                0.1249995,
-                0.2499994
+                0.2499998,
+                0.1249994,
+                0.2499992
             ]
         },
         "357": {
@@ -2989,7 +2961,23 @@
             ]
         },
         "376": {
-            "name": "SkyBoxes"
+            "name": "SkyBoxes",
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scaling": [
+                1.4199999,
+                1.4199999,
+                1.4199999
+            ]
         },
         "377": {
             "link": {
@@ -3012,20 +3000,20 @@
                 }
             ],
             "translation": [
-                -2.5825085,
-                1.7328009,
-                0.6525711
+                -2.5825324,
+                1.7328162,
+                0.6525776
             ],
             "rotation": [
-                8.842729215530198e-8,
+                8.84272566281652e-8,
                 0.9659258,
-                1.460010281562063e-7,
-                -0.2588188
+                1.460035576883456e-7,
+                -0.258819
             ],
             "scaling": [
-                6.545,
-                6.545,
-                6.545
+                33.9489173,
+                33.9489212,
+                33.9489173
             ],
             "name": "SkyBox1",
             "parent": "376"
@@ -3051,22 +3039,61 @@
                 }
             ],
             "translation": [
-                -2.5825085,
-                1.7328009,
-                0.6525711
+                -2.5825307,
+                1.7328201,
+                0.6525786
             ],
             "rotation": [
-                8.842729215530198e-8,
+                8.842723531188312e-8,
                 0.9659258,
-                1.460010281562063e-7,
-                -0.2588188
+                1.4600399822484178e-7,
+                -0.258819
             ],
             "scaling": [
-                6.5469999,
-                6.5469999,
-                6.5469999
+                33.9593238,
+                33.9592933,
+                33.9593238
             ],
             "name": "SkyBox2",
+            "parent": "376"
+        },
+        "387": {
+            "link": {
+                "name": "Sphere",
+                "file": "assets\\InvertedSphere.glb"
+            },
+            "components": [
+                {
+                    "mesh": {
+                        "material": "388"
+                    },
+                    "active": false
+                },
+                {
+                    "type": "arEnabled",
+                    "arEnabled": {
+                        "skyBox": "326",
+                        "floor": "15"
+                    }
+                }
+            ],
+            "translation": [
+                -2.5825307,
+                1.7328201,
+                0.6525786
+            ],
+            "rotation": [
+                8.842723531188312e-8,
+                0.9659258,
+                1.4600399822484178e-7,
+                -0.258819
+            ],
+            "scaling": [
+                34.0,
+                34.0,
+                34.0
+            ],
+            "name": "SkyBox3",
             "parent": "376"
         }
     },
@@ -3435,6 +3462,12 @@
                 "name": "Skybox2.jpg",
                 "file": "static\\Skybox2.jpg"
             }
+        },
+        "390": {
+            "link": {
+                "name": "Skybox3.jpg",
+                "file": "assets\\Skyboxes\\Skybox3.jpg"
+            }
         }
     },
     "images": {
@@ -3524,6 +3557,12 @@
             "link": {
                 "name": "Skybox2.jpg",
                 "file": "static\\Skybox2.jpg"
+            }
+        },
+        "389": {
+            "link": {
+                "name": "Skybox3.jpg",
+                "file": "assets\\Skyboxes\\Skybox3.jpg"
             }
         }
     },
@@ -3829,6 +3868,13 @@
             "pipeline": "35",
             "Flat": {
                 "flatTexture": "385"
+            }
+        },
+        "388": {
+            "name": "Skybox3",
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "390"
             }
         }
     },
@@ -4369,6 +4415,10 @@
         },
         "386": {
             "fileName": "static/Skybox2.jpg",
+            "importerName": ""
+        },
+        "391": {
+            "fileName": "assets/Skyboxes/Skybox3.jpg",
             "importerName": ""
         }
     },

@@ -1796,20 +1796,20 @@
             },
             "parent": "294",
             "translation": [
-                -0.2068394,
-                0.3334278,
-                0.0333294
+                -1.0047008,
+                0.2778067,
+                -0.8041578
             ],
             "rotation": [
                 0.0,
+                0.6755225,
                 0.0,
-                0.0,
-                1.0
+                0.7373393
             ],
             "scaling": [
+                0.9999985,
                 1.0,
-                1.0,
-                1.0
+                0.9999985
             ]
         },
         "21": {
@@ -1824,9 +1824,9 @@
                 }
             ],
             "translation": [
-                -2.3079783,
+                -4.3863263,
                 7.3737936,
-                -2.2334413
+                2.7699337
             ],
             "rotation": [
                 0.0,
@@ -2457,9 +2457,9 @@
                 -0.258819
             ],
             "scaling": [
-                33.9315376,
-                33.9315338,
-                33.9315376
+                33.9249992,
+                33.9249992,
+                33.9249992
             ],
             "name": "SkyBox0",
             "parent": "376"
@@ -2475,9 +2475,9 @@
                 }
             ],
             "translation": [
-                -0.6904947,
+                -2.5336482,
                 2.1143453,
-                4.4676594
+                2.7747271
             ],
             "rotation": [
                 0.0,
@@ -2767,7 +2767,7 @@
                 {
                     "type": "text",
                     "text": {
-                        "text": "\"Lowpoly drumstick\" \n(https://skfb.ly/69Yxq) by \nJiří Kuba is licensed under \nCreative Commons Attribution .\n\nCowbell by Poly by Google \n[CC-BY] via Poly Pizza\n\nDrumkit by J-Toastie \n[CC-BY] via Poly Pizza\n\nAlien Terrain 05 HDRI by \nGiimann on Sketchfab\n\nStylized_Jungle_Terrain_1 \nby Giimann on Sketchfab\n\nFREE - SkyBox Tundra Northern \nLights by Paul on Sketchfab\n\n360 of Coral Reefs in American Samoa\n\nCredit: The Ocean Agency / XL \nCatlin Seaview Survey",
+                        "text": "\"Lowpoly drumstick\" \n(https://skfb.ly/69Yxq) by \nJiří Kuba is licensed under \nCreative Commons Attribution .\n\nCowbell by Poly by Google \n[CC-BY] via Poly Pizza\n\nDrumkit by J-Toastie \n[CC-BY] via Poly Pizza\n\nAlien Terrain 05 HDRI by \nGiimann on Sketchfab\n\nStylized_Jungle_Terrain_1 \nby Giimann on Sketchfab\n\nFREE - SkyBox Tundra Northern \nLights by Paul on Sketchfab",
                         "material": "201",
                         "alignment": "center",
                         "wrapMode": "none"
@@ -2777,18 +2777,18 @@
             "translation": [
                 0.0521416,
                 0.156118,
-                0.0121556
+                0.0121557
             ],
             "rotation": [
-                -0.4998052,
-                0.5006924,
-                0.499502,
-                0.4999994
+                -0.499805,
+                0.5006929,
+                0.4995015,
+                0.4999997
             ],
             "scaling": [
-                0.711472,
-                1.0182486,
-                2.0365285
+                0.8084909,
+                1.1571007,
+                2.3142364
             ]
         },
         "356": {
@@ -2987,14 +2987,14 @@
             "components": [
                 {
                     "mesh": {
-                        "material": "378"
+                        "material": "418"
                     },
                     "active": false
                 },
                 {
                     "type": "arEnabled",
                     "arEnabled": {
-                        "skyBox": "326",
+                        "skyBox": "377",
                         "floor": "15"
                     }
                 }
@@ -3095,6 +3095,71 @@
             ],
             "name": "SkyBox3",
             "parent": "376"
+        },
+        "415": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002",
+                "file": "assets\\rideCymbal.glb"
+            },
+            "parent": "294",
+            "translation": [
+                1.063773,
+                0.2773132,
+                2.0221412
+            ],
+            "rotation": [
+                5.944198733232042e-8,
+                -0.0738196,
+                -8.418554386935284e-8,
+                0.9972715
+            ],
+            "scaling": [
+                1.1591984,
+                1.1591999,
+                1.1591984
+            ]
+        },
+        "417": {
+            "name": "hiHat",
+            "parent": "415",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.27,
+                                0.0799999,
+                                0.27
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "drum",
+                    "drum": {
+                        "drumSoundPath": "sfx/ride-cymbal.wav",
+                        "inputObject": "130"
+                    }
+                }
+            ],
+            "translation": [
+                -0.7390565,
+                2.0629191,
+                -0.4605264
+            ],
+            "rotation": [
+                0.0773758,
+                -0.5562307,
+                0.1879149,
+                0.8057966
+            ],
+            "scaling": [
+                0.9999859,
+                0.9999862,
+                1.3066433
+            ]
         }
     },
     "meshes": {
@@ -3388,6 +3453,54 @@
                 "name": "Sphere",
                 "file": "assets\\InvertedSphere.glb"
             }
+        },
+        "396": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh",
+                "file": "assets\\rideCymbal.glb"
+            }
+        },
+        "397": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh.0",
+                "file": "assets\\rideCymbal.glb"
+            }
+        },
+        "398": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh.1",
+                "file": "assets\\rideCymbal.glb"
+            }
+        },
+        "399": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh.2",
+                "file": "assets\\rideCymbal.glb"
+            }
+        },
+        "408": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh",
+                "file": "assets\\rideCymbal2.glb"
+            }
+        },
+        "409": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh.0",
+                "file": "assets\\rideCymbal2.glb"
+            }
+        },
+        "410": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh.1",
+                "file": "assets\\rideCymbal2.glb"
+            }
+        },
+        "411": {
+            "link": {
+                "name": "Crash_Cymbal_Cylinder.002-Mesh.2",
+                "file": "assets\\rideCymbal2.glb"
+            }
         }
     },
     "textures": {
@@ -3596,7 +3709,7 @@
             },
             "pipeline": "35",
             "Flat": {
-                "flatTexture": "374"
+                "flatTexture": "365"
             }
         },
         "22": {
@@ -3856,18 +3969,11 @@
                 "file": "assets\\Cowbell.glb"
             }
         },
-        "378": {
-            "name": "Skybox1",
-            "pipeline": "35",
-            "Flat": {
-                "flatTexture": "380"
-            }
-        },
         "383": {
             "name": "Skybox2",
             "pipeline": "35",
             "Flat": {
-                "flatTexture": "385"
+                "flatTexture": "371"
             }
         },
         "388": {
@@ -3875,6 +3981,64 @@
             "pipeline": "35",
             "Flat": {
                 "flatTexture": "390"
+            }
+        },
+        "392": {
+            "link": {
+                "name": "Gold",
+                "file": "assets\\rideCymbal.glb"
+            },
+            "Phong": {
+                "shininess": 30
+            }
+        },
+        "393": {
+            "link": {
+                "name": "Gray1",
+                "file": "assets\\rideCymbal.glb"
+            }
+        },
+        "394": {
+            "link": {
+                "name": "Gray2",
+                "file": "assets\\rideCymbal.glb"
+            }
+        },
+        "395": {
+            "link": {
+                "name": "Black",
+                "file": "assets\\rideCymbal.glb"
+            }
+        },
+        "404": {
+            "link": {
+                "name": "Gold",
+                "file": "assets\\rideCymbal2.glb"
+            }
+        },
+        "405": {
+            "link": {
+                "name": "Gray1",
+                "file": "assets\\rideCymbal2.glb"
+            }
+        },
+        "406": {
+            "link": {
+                "name": "Gray2",
+                "file": "assets\\rideCymbal2.glb"
+            }
+        },
+        "407": {
+            "link": {
+                "name": "Black",
+                "file": "assets\\rideCymbal2.glb"
+            }
+        },
+        "418": {
+            "name": "Skybox1",
+            "pipeline": "35",
+            "Flat": {
+                "flatTexture": "368"
             }
         }
     },
@@ -4420,6 +4584,16 @@
         "391": {
             "fileName": "assets/Skyboxes/Skybox3.jpg",
             "importerName": ""
+        },
+        "401": {
+            "fileName": "assets/rideCymbal.glb",
+            "importerName": "",
+            "importPhysicalAsPhongMaterials": true
+        },
+        "413": {
+            "fileName": "assets/rideCymbal2.glb",
+            "importerName": "",
+            "importPhysicalAsPhongMaterials": true
         }
     },
     "fonts": {

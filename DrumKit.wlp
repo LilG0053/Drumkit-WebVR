@@ -2441,7 +2441,12 @@
                     "type": "arEnabled",
                     "arEnabled": {
                         "skyBox": "326",
-                        "floor": "15"
+                        "floor": "15",
+                        "swapPanel": "356",
+                        "raiseButtonMesh": "358",
+                        "buttonLabel": "359",
+                        "imageCycleButton": "357",
+                        "skyBoxes": "376"
                     }
                 }
             ],
@@ -2792,7 +2797,7 @@
             ]
         },
         "356": {
-            "name": "Panel",
+            "name": "SwapEnv",
             "components": [
                 {
                     "type": "mesh",
@@ -2990,13 +2995,6 @@
                         "material": "418"
                     },
                     "active": false
-                },
-                {
-                    "type": "arEnabled",
-                    "arEnabled": {
-                        "skyBox": "377",
-                        "floor": "15"
-                    }
                 }
             ],
             "translation": [
@@ -3029,13 +3027,6 @@
                         "material": "383"
                     },
                     "active": false
-                },
-                {
-                    "type": "arEnabled",
-                    "arEnabled": {
-                        "skyBox": "326",
-                        "floor": "15"
-                    }
                 }
             ],
             "translation": [
@@ -3068,13 +3059,6 @@
                         "material": "388"
                     },
                     "active": false
-                },
-                {
-                    "type": "arEnabled",
-                    "arEnabled": {
-                        "skyBox": "326",
-                        "floor": "15"
-                    }
                 }
             ],
             "translation": [
@@ -3191,7 +3175,8 @@
                     "type": "zesty-banner",
                     "zesty-banner": {
                         "adUnit": "e914f3bf-e7ac-4869-8d4d-8b4f91143e87",
-                        "format": "medium-rectangle"
+                        "format": "medium-rectangle",
+                        "dynamicNetworking": false
                     }
                 }
             ],

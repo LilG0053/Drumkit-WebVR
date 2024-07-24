@@ -26,7 +26,6 @@ import {ButtonComponent} from './button.js';
 import {ColorSwitcher} from './colorSwitcher.js';
 import {Drum} from './drum.js';
 import {KickDrumActivation} from './kickDrumActivation.js';
-import {ZestyBanner} from './zesty-wonderland-sdk.js';
 /* wle:auto-imports:end */
 
 import {loadRuntime} from '@wonderlandengine/api';
@@ -100,7 +99,6 @@ engine.registerComponent(ButtonComponent);
 engine.registerComponent(ColorSwitcher);
 engine.registerComponent(Drum);
 engine.registerComponent(KickDrumActivation);
-engine.registerComponent(ZestyBanner);
 /* wle:auto-register:end */
 
 try {

@@ -21,14 +21,14 @@ import {MouseLookComponent} from '@wonderlandengine/components';
 import {PlayerHeight} from '@wonderlandengine/components';
 import {TeleportComponent} from '@wonderlandengine/components';
 import {VrModeActiveSwitch} from '@wonderlandengine/components';
+import {StickSkins} from './StickSkins.js';
 import {ArEnabled} from './arEnabled.js';
 import {ButtonComponent} from './button.js';
 import {ColorSwitcher} from './colorSwitcher.js';
 import {Drum} from './drum.js';
 import {KickDrumActivation} from './kickDrumActivation.js';
 /* wle:auto-imports:end */
-
-import {loadRuntime} from '@wonderlandengine/api';
+import { loadRuntime } from '@wonderlandengine/api';
 
 /* wle:auto-constants:start */
 const Constants = {
@@ -94,6 +94,7 @@ engine.registerComponent(MouseLookComponent);
 engine.registerComponent(PlayerHeight);
 engine.registerComponent(TeleportComponent);
 engine.registerComponent(VrModeActiveSwitch);
+engine.registerComponent(StickSkins);
 engine.registerComponent(ArEnabled);
 engine.registerComponent(ButtonComponent);
 engine.registerComponent(ColorSwitcher);

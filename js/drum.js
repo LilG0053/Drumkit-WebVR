@@ -1,5 +1,5 @@
 import { Component, Property, Type, InputComponent, MeshComponent, Object3D } from '@wonderlandengine/api';
-import { HowlerAudioSource } from '@wonderlandengine/components';
+import { CursorTarget, HowlerAudioSource } from '@wonderlandengine/components';
 
 /**
  * Helper function to trigger haptic feedback pulse.
@@ -49,11 +49,16 @@ export class Drum extends Component {
     otherDrumstickPlayed = false;
     static onRegister(engine) {
         engine.registerComponent(HowlerAudioSource);
+        engine.registerComponent(CursorTarget);
     }
 
 
     init() {
         this.collider = this.object.getComponent('collision');
+    }
+
+    onActivate() {
+        this.target.onDown.add(this.onDown);
     }
 
     start() {
@@ -64,8 +69,11 @@ export class Drum extends Component {
             spatial: true,
         });
         this.hitLastFrame = false;
+        this.target =
+            this.object.getComponent(CursorTarget) ||
+            this.object.addComponent(CursorTarget);
     }
-    
+
     update(dt) {
         /* Called every frame. */
         let overLaps = this.collider.queryOverlaps();
@@ -99,7 +107,7 @@ export class Drum extends Component {
                     //travel up the hierarchy to get the controller
                     hapticFeedback(otherObject.parent.parent.parent.parent, 0.9, 100);
                 }
-            } 
+            }
         }
 
         if (!stickDetected) {
@@ -108,5 +116,10 @@ export class Drum extends Component {
         if (stickNumber === 1) {
             this.otherDrumstickPlayed = false;
         }
+    }
+
+    onDown = (_, cursor) => {
+        //For M+K support
+        this.soundHit.play();
     }
 }

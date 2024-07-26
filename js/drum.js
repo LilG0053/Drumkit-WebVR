@@ -31,7 +31,20 @@ export function hapticFeedback(
         }
     }
 }
-
+/** Checks if the open hi hat button is pressed, and determines if the open sound should be played*/
+function openHatCheck() {
+    for (let input of this.engine.xr.session.inputSources) {
+        if (input.handedness === 'left' && input.gamepad) {
+            if (input.gamepad.buttons[4].pressed) {
+                this.openHat.play();
+            } else {
+                this.soundHit.play();
+            }
+        } else {
+            this.soundHit.play();
+        }
+    }
+}
 /**
  * drum
  */
@@ -42,6 +55,7 @@ export class Drum extends Component {
         /** Object that has the button's mesh attached */
         drumSoundPath: { type: Type.String, default: 'sfx/snare.mp3' },
         inputObject: Property.object(),
+        isHiHat: { type: Type.Bool, defualt: false },
     };
 
     hitLastFrame = false;
@@ -68,6 +82,10 @@ export class Drum extends Component {
             src: this.drumSoundPath.toString(),
             spatial: true,
         });
+        this.openHat = this.object.addComponent(HowlerAudioSource, {
+            src: 'sfx/openHat.mp3',
+            spatial: true,
+        })
         this.hitLastFrame = false;
         this.target =
             this.object.getComponent(CursorTarget) ||
@@ -80,6 +98,7 @@ export class Drum extends Component {
         let stickDetected = false;
         let isOtherDrumstick = false;
         let stickNumber = 0;
+        let openHatPlayed = false;
         // check for stick overlap
         for (const otherCollision of overLaps) {
             const otherObject = otherCollision.object;
@@ -92,14 +111,39 @@ export class Drum extends Component {
                     isOtherDrumstick = true
                 }
                 if (!this.hitLastFrame) {
-                    this.soundHit.play();
+                    //Check if the object is a hi hat
+                    if (this.isHiHat) {
+                        for (let input of this.engine.xr.session.inputSources) {
+                            if (input.handedness === 'left' && input.gamepad) {
+                                if (input.gamepad.buttons[4].pressed) {
+                                    this.openHat.play();
+                                    openHatPlayed = true;
+                                }
+                            }
+                        }
+                    }
+                    if (!openHatPlayed) {
+                        this.soundHit.play();
+                    }
                     this.hitLastFrame = true;
                     stickDetected = true;
                     this.lastObjectId = otherObject.objectId;
                     //travel up the hierarchy to get the controller
                     hapticFeedback(otherObject.parent.parent.parent.parent, 0.9, 100);
                 } else if (isOtherDrumstick && !this.otherDrumstickPlayed) {
-                    this.soundHit.play();
+                    if (this.isHiHat) {
+                        for (let input of this.engine.xr.session.inputSources) {
+                            if (input.handedness === 'left' && input.gamepad) {
+                                if (input.gamepad.buttons[4].pressed) {
+                                    this.openHat.play();
+                                    openHatPlayed = true;
+                                }
+                            }
+                        }
+                    }
+                    if (!openHatPlayed) {
+                        this.soundHit.play();
+                    }
                     this.hitLastFrame = true;
                     stickDetected = true;
                     this.lastObjectId = otherObject.objectId;

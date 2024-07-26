@@ -2230,7 +2230,8 @@
                     "type": "drum",
                     "drum": {
                         "drumSoundPath": "sfx/hihat.wav",
-                        "inputObject": "130"
+                        "inputObject": "130",
+                        "isHiHat": true
                     }
                 }
             ],
@@ -3182,7 +3183,7 @@
                 {
                     "type": "zesty-banner",
                     "zesty-banner": {
-                        "adUnit": "e914f3bf-e7ac-4869-8d4d-8b4f91143e87",
+                        "adUnit": "",
                         "format": "medium-rectangle",
                         "dynamicNetworking": false
                     }

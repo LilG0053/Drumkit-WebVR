@@ -1,5 +1,5 @@
 import { Component, Property } from '@wonderlandengine/api';
-import { HeyVRSDK } from 'latest.sandbox.js';
+import { HeyVRSDK } from './latest.sandbox.js';
 
 /**
  * StickSkins

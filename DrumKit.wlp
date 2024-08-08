@@ -3154,58 +3154,6 @@
                 1.3066433
             ]
         },
-        "419": {
-            "name": "Advertisement",
-            "components": [
-                {
-                    "type": "mesh",
-                    "mesh": {
-                        "mesh": "7",
-                        "material": "420"
-                    }
-                },
-                {
-                    "type": "cursor-target"
-                },
-                {
-                    "type": "collision",
-                    "collision": {
-                        "collider": "aabb",
-                        "aabb": {
-                            "extents": [
-                                0.1,
-                                0.25,
-                                0.3799999
-                            ]
-                        }
-                    }
-                },
-                {
-                    "type": "zesty-banner",
-                    "zesty-banner": {
-                        "adUnit": "",
-                        "format": "medium-rectangle",
-                        "dynamicNetworking": false
-                    }
-                }
-            ],
-            "translation": [
-                -1.2703166,
-                0.5480459,
-                1.0938078
-            ],
-            "rotation": [
-                -0.0694107,
-                -0.703691,
-                -0.0694111,
-                0.7036924
-            ],
-            "scaling": [
-                0.4068674,
-                0.2574752,
-                0.3805346
-            ]
-        },
         "422": {
             "name": "ChangeColors",
             "components": [

@@ -5,3 +5,7 @@ This project provides the code for the WebXR game found here -> https://heyvr.io
 ## Requires Wonderland Engine
 Download as a zip, and when opening the Wonderland Engine add a new project. Locate the directory where you extracted this repo. Please see the Wonderland documentation for how-tos on getting started and port forwarding.
 
+# Branches
+The main branch is a platform agnostic branch, while the HeyVR branch implements some HeyVR specific features, and is still a work in progress.
+
+
